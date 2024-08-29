@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:assessment_tracker/StudentDashboard.dart';
 import 'package:assessment_tracker/adminLogin.dart';
 import 'package:flutter/material.dart';
 
@@ -135,7 +136,14 @@ class _LoginState extends State<StudentLogin> {
                                   color: Colors.white,
                                 ),
                                 child: TextButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const StudentDashboard()),
+                                    );
+                                  },
                                   child: const Text(
                                     'Login',
                                     style: TextStyle(

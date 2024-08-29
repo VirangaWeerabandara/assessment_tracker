@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:assessment_tracker/AdminDashboard.dart';
+import 'package:assessment_tracker/Studentlogin.dart';
 import 'package:flutter/material.dart';
 
 class AdminLogin extends StatefulWidget {
@@ -135,7 +137,14 @@ class _LoginState extends State<AdminLogin> {
                                   color: Colors.white,
                                 ),
                                 child: TextButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const AdminDashboard()),
+                                    );
+                                  },
                                   child: const Text(
                                     'Login',
                                     style: TextStyle(
@@ -159,7 +168,7 @@ class _LoginState extends State<AdminLogin> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              const AdminLogin()),
+                                              const StudentLogin()),
                                     );
                                   },
                                   child: const Text(
